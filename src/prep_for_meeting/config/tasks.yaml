@@ -60,7 +60,11 @@ meeting_preparation_task:
     Meeting Objective {objective}
     Incorporate any relevant points from prior interactions {prior_interactions}
 
+    Create both a markdown report and a PowerPoint presentation outline. The PowerPoint outline should be included in the markdown report.
+
   expected_output: >
-    A comprehensive briefing powerpoint presentation for the meeting with {company} that includes sections for meeting participant-only bios,
-    industry overview, talking points, and strategic recommendations. The presentation should be structured in a logical
-    and engaging manner to facilitate a productive and insightful meeting.
+    A comprehensive briefing document for the meeting with {company} that includes:
+    1. A markdown report with sections for meeting participant bios, industry overview, talking points, and strategic recommendations.
+    2. A PowerPoint presentation outline embedded within the markdown report, showing slide titles and key content for each slide.
+    
+    The presentation should be structured in a logical and engaging manner to facilitate a productive and insightful meeting.

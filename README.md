@@ -44,11 +44,63 @@ uv run prep_for_meeting
 
 This command initializes the prep-for-meeting Crew, assembling the agents and assigning them tasks as defined in your configuration.
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+This example, unmodified, will create a `report.md` file with the output of research on LLMs in the root folder. The report now includes a PowerPoint presentation outline embedded within it.
 
 ## Understanding Your Crew
 
 The prep-for-meeting Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+
+## React Frontend Deployment
+
+This project includes a React frontend that provides a user-friendly interface for interacting with the CrewAI backend. To deploy the frontend:
+
+### Prerequisites
+
+- Node.js (v14 or later)
+- npm or yarn
+
+### Setup and Installation
+
+1. Navigate to the react-frontend directory:
+```bash
+cd react-frontend
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm start
+```
+
+The React application will be available at http://localhost:3000.
+
+### Production Deployment
+
+To build the React application for production:
+
+```bash
+cd react-frontend
+npm run build
+```
+
+This creates a `build` directory with optimized production files that can be deployed to any static hosting service like AWS S3, Netlify, Vercel, or GitHub Pages.
+
+### Backend API Integration
+
+The React frontend communicates with a Flask API backend. To run the backend:
+
+```bash
+cd api
+python server.py
+```
+
+The API server will start on port 5000. Make sure both the frontend and backend are running for the application to work properly.
+
+For more detailed information about the React frontend, see the [README-FRONTEND.md](README-FRONTEND.md) file.
 
 ## Support
 
